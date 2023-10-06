@@ -11,7 +11,9 @@ The GradeBook Manager is a C++ console application designed to help users manage
   - Calculate the average grade for the class.
   - Display the highest grade achieved.
   - Display the lowest grade achieved.
-
+- **Update Students**: Modify a student's name or grade.
+- **Delete Students**: Remove a student from the GradeBook.
+- **Search Students**: Find a student's grade by name.
 ## Getting Started
 
 ### Prerequisites
@@ -24,7 +26,7 @@ The GradeBook Manager is a C++ console application designed to help users manage
 2. Navigate to the directory containing the source code.
 3. Compile the code:
    ```bash
-   g++ -o gradebook_manager main.cpp
+   g++ -std=c++17 main.cpp -o gradebook_manager
    ```
 4. Run the compiled program:
    ```bash
