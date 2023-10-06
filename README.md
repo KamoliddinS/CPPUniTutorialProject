@@ -52,4 +52,7 @@ With this project, students will:
 - Introduce sorting capabilities to list students in order of grades.
 - Add error checks for invalid inputs.
 
-# CPPUniTutorialProject1
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
