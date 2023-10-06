@@ -20,8 +20,6 @@ int findLowestGrade(const vector<Student> &students);
 void deleteStudent(vector<Student> &students, const string &name);
 void updateStudent(vector<Student>& students);
 void searchStudents(const vector<Student>& students);
-void saveStudentData(const vector<Student> &students);
-void loadStudentData(vector<Student> &students);
 int main()
 {
     vector<Student> students;
@@ -229,38 +227,4 @@ void searchStudents(const vector<Student>& students) {
     } else {
         cout << "Invalid choice." << endl;
     }
-}
-
-// Function to load student data from a file
-void loadStudentData(vector<Student> &students) {
-    ifstream inputFile("student_data.txt"); // Open the file for reading
-
-    if (!inputFile) {
-        cerr << "Error opening file for reading." << endl;
-        return;
-    }
-
-    Student student;
-    while (inputFile >> student.name >> student.grade) {
-        students.push_back(student);
-    }
-
-    inputFile.close(); // Close the file
-}
-#include <fstream> // Include the file stream library
-
-// Function to save student data to a file
-void saveStudentData(const vector<Student> &students) {
-    ofstream outputFile("student_data.txt"); // Open the file for writing
-
-    if (!outputFile) {
-        cerr << "Error opening file for writing." << endl;
-        return;
-    }
-
-    for (const Student &student : students) {
-        outputFile << student.name << " " << student.grade << endl;
-    }
-
-    outputFile.close(); // Close the file
 }
