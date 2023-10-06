@@ -26,7 +26,7 @@ int main()
 {
     vector<Student> students;
     int choice;
-
+    loadStudentData(students);
     do
     {
         cout << "GradeBook Manager\n";
@@ -47,6 +47,7 @@ int main()
         {
         case 1:
             addStudent(students);
+            saveStudentData(students);
             break;
         case 2:
             displayStudents(students);
@@ -64,9 +65,11 @@ int main()
             cout << "Enter the name of the student to delete: ";
             cin >> nameToDelete;
             deleteStudent(students, nameToDelete);
+            saveStudentData(students);
             break;
         case 7:
             updateStudent(students);
+            saveStudentData(students);
             break;
         case 8:
             searchStudents(students);
